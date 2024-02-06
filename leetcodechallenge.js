@@ -1,3 +1,4 @@
+// challenge no2
 // function expect(val){
 //     return {
 //         toBe: function(expected){
@@ -27,21 +28,9 @@
 //     console.log(error.message);
 // }
 
-// let a=5
-// let b=5
-// a === b
-// a !== b
-// // values data types
-// // console.log(a===b)
-
-// console.log(0.1+0.2===0.3);
 
 
-
-// var x = 5;
-// console.log( x++ + ++x );
-
-
+// CHALLENGE NO #4
 // function createCounter(init) {
 //     let count=init;
 //     return {
