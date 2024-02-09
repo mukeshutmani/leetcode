@@ -98,6 +98,20 @@ console.log(result)
 
 // CHALLENGE NO #6 👩‍💻🙌👍
 // ---->
+function filter(arr,fn){
+    const filterarr=[];
+    for (let i=0; i<arr.length; i++){
+        if(fn(arr[i], i)){
+            filterarr.push(arr[i]);
+        }
+    }
+    return filterarr;
+}
+const array=[1,2,3]
+const filterarray = function filterFunction(n,i){ return i===0}
+const result = filter( array, filterarray)
+console.log(result);
+                     ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
 
 
 
