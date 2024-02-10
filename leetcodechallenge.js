@@ -115,8 +115,26 @@ console.log(result);
 
 
 
+// CHALLENGE NO #7 👩‍💻🙌👍
+function reduce(arr, fn ,init ){
+    let total_result = init;
+    for (let i=0; i<arr.length; i++){
+         total_result = fn( total_result, arr[i] )
+    }
 
+    return total_result;
 
+}
+
+const array=[1,2,3,4,5]
+const reducer_fn=function (sum_value, array_elements){
+    return sum_value + array_elements*array_elements;
+} 
+const init =25;
+const result = reduce(array , reducer_fn , init)
+console.log(result)
+
+                   ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
 
 
 
