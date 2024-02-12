@@ -111,6 +111,7 @@ const array=[1,2,3]
 const filterarray = function filterFunction(n,i){ return i===0}
 const result = filter( array, filterarray)
 console.log(result);
+
                      ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
 
 
@@ -138,8 +139,35 @@ console.log(result)
 
 
 
+// CHALLENGE NO #8 👩‍💻🙌👍
+function composeFunctions(functions) {
+    // If the array is empty, return the identity function
+    if (functions.length === 0) {
+        return function(x) { return x; };
+    }
+    
+    return function(x) {
+        // Iterate through the array of functions in reverse order
+        let result = x;
+        for (let i = functions.length - 1; i >= 0; i--) {
+            // Apply each function to the result of the previous function
+            result = functions[i](result);
+        }
+        return result;
+    };
+}
 
+// Example usage:
+const f = x => x + 1;
+const g = x => x * 2;
+const h = x => x - 3;
 
+const composedFunction = composeFunctions([f,g,h]);
+
+// Test the composed function
+console.log(composedFunction(5)); 
+
+                         ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
 
 
 
