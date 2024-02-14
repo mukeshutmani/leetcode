@@ -139,6 +139,7 @@ console.log(result)
 
 
 
+
 // CHALLENGE NO #8 👩‍💻🙌👍
 function composeFunctions(functions) {
     // If the array is empty, return the identity function
@@ -172,9 +173,15 @@ console.log(composedFunction(5));
 
 
 
+          // CHALLENGE NO #9 👩‍💻🙌👍
+function argumentlength(args){
+    return args.length
 
+}
+const argumment = argumentlength(1,2,3,4,87,987)
+console.log(argumment)
 
-
+                 ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
 
 
 
