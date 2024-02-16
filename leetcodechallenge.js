@@ -186,8 +186,32 @@ console.log(argumment)
 
 
 
+             // CHALLENGE NO #10 👩‍💻🙌👍
+function once(fn){
+    let hasbeenCalled = true ;
+    let result ;
+    return function(...args){
+         if ( hasbeenCalled){
+             result = fn(...args);
+             hasbeenCalled = false;
+             return result
+         }
+         else {
+             return undefined;
+         }
+    }
 
+}
 
+function add(a,b){
+    return a+b;
+}
+
+const result = once(add)
+console.log(result(2,5))
+console.log(result(2,9))
+
+         ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
 
 
 
