@@ -214,6 +214,79 @@ console.log(result(2,9))
          ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
 
 
+ // CHALLENGE NO #11 👩‍💻🙌👍
+function memoize(fn){
+    const cache = {}
+    return function (...args) {
+        // '[4,5]'
+           const key = JSON.stringify(args)
+           if (cache[key] == undefined ){
+               cache[key] = fn(...args)
+           }
+           return cache[key]
+
+
+    }
+}
+
+function sum(a,b){
+    return a+b
+}
+
+const memoizedSum = memoize(sum)
+console.log(memoizedSum(4,5))
+
+               ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
+
+
+ // CHALLENGE NO #12 👩‍💻🙌👍
+
+function addTwoPromises(promise1,promise2){
+    return new Promise((resolve, reject)=>{
+        Promise.all([promise1,promise2])
+       .then(([value1,value2])=>{
+           resolve(value1+value2)
+       })
+       .catch(error=>{
+           reject(error)
+       })
+       
+    });
+}
+
+
+const promise1 = new Promise(resolve=> resolve(2))
+const promise2 = new Promise(resolve=> resolve(20))
+
+
+addTwoPromises(promise1, promise2)
+.then((sum)=>{
+    console.log('sum of two Promises:',sum)
+})
+.catch(error=>{
+    console.log(error)
+})
+
+⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
