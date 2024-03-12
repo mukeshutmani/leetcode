@@ -272,6 +272,50 @@ addTwoPromises(promise1, promise2)
 
 
 
+ // CHALLENGE NO #13 👩‍💻🙌👍
+
+function sleep(millis){
+    return new Promise(resolve =>{
+        setTimeout(resolve, millis)
+    })
+}
+
+const milli= 100;
+console.log('start')
+sleep(milli)
+.then(()=>{
+    console.log('sleeping of code :',milli,'mili second')
+})
+
+
+ ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
+
+
+
+
+    
+       // CHALLENGE NO #14 👩‍💻🙌👍
+
+function cancellable(fn, args, t){
+
+   function cancelFn(){
+    clearTimeout(timer)
+   }
+  const timer = setTimeout(()=>{
+    fn(...args)
+  }, t);
+   return cancelFn;
+}
+
+function fn(x){
+    console.log(x*x);
+}
+const cancelFn = cancellable(fn,2,5000)
+cancelFn();
+
+
+
+
 
 
 
