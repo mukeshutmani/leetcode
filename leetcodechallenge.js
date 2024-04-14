@@ -314,6 +314,30 @@ const cancelFn = cancellable(fn,2,5000)
 cancelFn();
 
 
+ ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
+
+
+   // CHALLENGE NO #15 👩‍💻🙌👍
+function cancelFunction(fn, args , t ){
+        
+    fn(...args)
+    const stop = setInterval(()=>{
+              fn(...args)
+    },t)
+  
+    return ()=>{ clearInterval(stop)}
+
+}
+
+function fn(txt){
+console.log(txt)
+}
+
+const result = cancelFunction(fn, ['mr google coder'], 1000)
+setTimeout(result, 5000)
+
+
+ ⏭⏭⏭⏭⏭ MR GOOGLE CODER ⏭⏭⏭⏭⏭
 
 
 
